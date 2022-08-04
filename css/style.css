@@ -19,21 +19,23 @@ header {
 header .menu {
     background-color:black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header img {
     width: 300px; 
     height: 80px;
 }
+
 header nav ul {
     list-style: none;
     display: flex;
+    margin: 0px 0px 0px 400px;
 }
+
 header nav ul li {
     margin: 15px;
 }
+
 header nav ul li a {
     text-decoration: none; 
     color: whitesmoke; 
@@ -42,9 +44,10 @@ header nav ul li a {
     transition: 3s;
 }
 
-
-/*media querie*/
-
+.collapse .navbar-collapse{
+    display: flex;
+    justify-content: end;
+}
 
 
 /*MAIN*/
@@ -85,16 +88,17 @@ header nav ul li a {
 }
 .servicios div div {
     width: 300px; 
-    height: 450px; 
-    border: 1px solid; 
+    height: 450px;
     margin: 25px; 
     text-align:center;
+    align-items: center;
     transition: 2s;
 }
 
 .servicios > div {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .servicios div div a {
@@ -103,13 +107,13 @@ header nav ul li a {
     background-color: black; 
     padding: 6px 15px 6px 15px;
     transition: 2s;
-    transition-timing-function: ease-in
+    transition-timing-function: ease-in;
 }
-
 
 .proyectos {
     background-color: black; 
 }
+
 .proyectos h2 {
     text-align: center; 
     font-size: 40px; 
@@ -321,15 +325,13 @@ header .menu {
 .servicio-uno div {
     width: 300px; 
     margin: 25px; 
-    text-align:left; 
-    /*aca va flex en reemplazo de display inline*/
+    text-align:left;
 }
 
 .servicio-dos div {
     width: 300px; 
     margin: 25px 50px 25px 80px; 
     text-align:left; 
-    /*aca va flex en reemplazo de display inline*/
 }
 
 .servicio-tres div {
@@ -337,8 +339,8 @@ header .menu {
     height: 450px; 
     margin: 25px; 
     text-align:left; 
-    /*aca va flex en reemplazo de display inline*/
 }
+
 
 
 /*PAGINA PROYECTOS*/
@@ -371,6 +373,7 @@ header .menu {
     object-fit: cover;
     transition: 1s;
 }
+
 
 
 /*Media Querie en Pagina PROYECTOS*/
@@ -415,7 +418,23 @@ header .menu {
     font-weight: 200;
     font-style: oblique; 
     text-align: center;
-    padding: 20px 90px 100px 90px;
+    padding: 20px 90px 70px 90px;
+}
+
+/*BOOTSTRAP CARRUSEL DE TESTIMONIOS EN PAGINA NOSOTROS*/
+
+.carousel-section{
+align-content: center;
+padding: 0px 250px 50px 300px;
+background-color: rgb(172, 172, 172);
+margin: 30px 0px 60px 0px;
+}
+
+.carousel-inner img{
+    width: 700px;
+    height: 400px;
+    margin: 50px 50px 50px 50px;
+    object-fit: cover;
 }
 
 
@@ -461,6 +480,15 @@ header .menu {
 .seccion-contacto img {
     width: 500px;
     height: 500px;
+}
+
+.seccion-contacto-izq .col{
+    margin: 20px 0px 25px 0px;
+}
+
+.seccion-contacto-izq .btn{
+    margin: 35px 0px 0px 0px;
+    padding: 5px 30px 5px 30px;
 }
 
 
@@ -552,6 +580,123 @@ footer div ul li a:hover{
     border-color:rgba(97, 97, 97, 0.336);
 
 }
+
+
+
+
+
+/*------------------------BOOTSTRAP-----------------------*/
+
+/*Navbar GENERAL - Aplicado en el HEADER en todas las páginas - Modificación del color de fondo del navbar de bootstrap en el HTML. La referencia es navbar-dark. Aclaraciones de las modificaciones del navbar hechas en el index.html*/
+
+/*INDEX*/
+/*Cards de servicios en la sección de servicios en el Index*/
+
+.servicios div div {
+    width: 300px; 
+    height: 450px;
+    margin: 25px; 
+    text-align:center;
+    align-items: center;
+    transition: 2s;
+}
+
+.servicios > div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.servicios div div a {
+    text-decoration: none; 
+    color: whitesmoke; 
+    background-color: black; 
+    padding: 6px 15px 6px 15px;
+    transition: 2s;
+    transition-timing-function: ease-in;
+}
+
+
+
+/*PAGINA SERVICIOS*/
+/*Acordeon de preguntas frecuentes en página servicios*/
+
+.preguntas-frecuentes h2{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    padding: 80px 0px 10px 0px;
+}
+
+.accordion-flush{
+    margin: 70px 100px 120px 180px;
+    padding: 25px;
+    background-color: rgb(187, 187, 187);
+}
+
+/*PAGINA PROYECTOS*/
+/*BOOTSTRAP sección newsletter en página de proyectos abajo d ela galeria de fotos*/
+
+.newsletter {
+    background-color: black;
+    margin: 0px 0px 50px 0px;
+}
+
+.newsletter h2{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 40px;
+    padding: 80px 0px 10px 0px;
+}
+
+.newsletter p{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.newsletter .mb-3{
+    align-items: center;
+    padding: 0px 350px 0px 350px;
+}
+
+.newsletter .suscribirme{
+    align-items: center;
+    padding: 0px 250px 100px 600px;
+}
+
+/*PAGINA NOSOTROS*/
+/*Bootstrap Carrusel de testimonios en página nosotros*/
+
+.carousel-section{
+    align-content: center;
+    padding: 0px 250px 50px 300px;
+    background-color: rgb(172, 172, 172);
+    margin: 30px 0px 60px 0px;
+}
+
+.carousel-inner img{
+    width: 700px;
+    height: 400px;
+    margin: 50px 50px 50px 50px;
+    object-fit: cover;
+}
+
+/*PAGINA CONTACTO*/
+/*Formulario de contacto de Bootstrap -- También hay modificaciones hechas en html aclaradas en el html*/
+
+.seccion-contacto-izq .col{
+    margin: 20px 0px 25px 0px;
+}
+
+.seccion-contacto-izq .btn{
+    margin: 35px 0px 0px 0px;
+    padding: 5px 30px 5px 30px;
+}
+
 
 
 

@@ -830,7 +830,6 @@ footer div ul li a:hover{
 .carousel-inner img{
     width: 700px;
     height: 400px;
-    margin: 50px 50px 50px 50px;
     object-fit: cover;
 }
 

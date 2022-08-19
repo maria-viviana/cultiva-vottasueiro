@@ -1,0 +1,11 @@
+$bottom:(
+    bg-bottom: black,
+    border-bottom: 1px solid black,
+    text-color: white,
+);
+
+.boton {
+    background-color: map-get($bottom, bg-bottom );
+    border-bottom: map-get($bottom, border-bottom);
+    color: map-get($bottom, text-color);
+}

@@ -1,1 +1,54 @@
-@import "../scss/components/servicios.scss"
+
+@import "../scss/components/header";
+@import "../scss/components/servicios.scss";
+@import "../scss/components/footer";
+
+
+//* MAPA
+
+$bottom:(
+    bg-bottom: black,
+    border-bottom: 1px solid black,
+    text-color: white,
+);
+
+.boton {
+    background-color: map-get($bottom, bg-bottom );
+    border-bottom: map-get($bottom, border-bottom);
+    color: map-get($bottom, text-color);
+}
+
+//* EXTEND
+
+%flex {
+    justify-content: center ;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-section{
+    @extend %flex;
+}
+
+.nosotros h1{
+    @extend %flex;
+}
+
+.nosotros p{
+    @extend %flex;
+}
+
+//*MIXIN
+
+@mixin flex ($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+.nosotros {
+    @include flex (flex, space-evenly, center);
+}
+
+
+

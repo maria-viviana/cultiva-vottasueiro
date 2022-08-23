@@ -1,0 +1,35 @@
+.nosotros{
+    h1{
+        font-size: 60px; 
+        font-weight: 300; 
+        text-align: center;
+        margin: 45px 0px 0px 0px;
+    }
+    p{
+        font-size: 22px; 
+        font-weight: 200;
+        font-style: oblique; 
+        text-align: center;
+        padding: 20px 90px 70px 90px;
+    }
+}
+
+/*PAGINA NOSOTROS*/
+/*Bootstrap Carrusel de testimonios en página nosotros*/
+
+.carousel-section{
+    align-content: center;
+    background-color: rgb(172, 172, 172);
+    margin: 30px 0px 60px 0px;
+    div{
+        div{
+            justify-content: center;
+            justify-items: center;
+            img{
+                width: 700px;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -6,32 +6,36 @@ header {
     menu{
         background-color:black;
         display: flex;
-    }
-    img {
-        width: 300px; 
-        height: 80px;
-    }
-    nav{
-        ul{
-            list-style: none;
-            display: flex;
-            margin: 0px 0px 0px 250px;
-            li {
-                margin: 15px;
-                a{
-                    text-decoration: none; 
-                    color: whitesmoke; 
-                    font-size: 20px; 
-                    font-weight: 400;
-                    transition: 3s;
+        .navbar{
+            .container-fluid{
+                .navbar-brand{
+                    img{
+                        width: 300px; 
+                        height: 80px;
+                    }
+                }
+                .navbar-collapse{
+                    .navbar-nav{
+                        list-style: none;
+                        display: flex;
+                        margin: 0px 0px 0px 250px;
+                        .nav-item{
+                            margin: 15px;
+                            .nav-link{
+                                text-decoration: none; 
+                                color: whitesmoke; 
+                                font-size: 20px; 
+                                font-weight: 400;
+                                transition: 3s;
+                                    &:hover{
+                                        color: rgba(221, 221, 221, 0.479);
+                                        text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-        }
-    }
-    .collapse {
-        .navbar-collapse{
-            display: flex;
-        justify-content: end;
         }
     }
 }

@@ -8,6 +8,7 @@ Tipo de sitio web: profesional. La web cuenta con 5 páginas en total: inicio, s
 Objetivo web: mostrar los servicios que ofrecemos, los proyectos realizados y que sirva como otro canal de contacto. 
 
 TECNOLOGÍA Y CÓDIGOS
+
 El proyecto fue desarrollado en Visual Studio Code utilizando HTML para la estructura del sitio. Se utilizó SASS para crear su diseño y estilo, incorporando en el mismo Flexbox y Grid para direccionar y acomodar elementos. Se incluyeron fragmentos de código de Bootstrap, animaciones y transiciones. Se crearon partials para reducir la cantidad de códigos cómo mixins y extends. La web es responsive aplicando media queries en cada página. Toda la web incluye SEO optimizando títulos, metas e imágenes (las configuraciones aplicadas de SEO se encuentran detallas en el archivo pdf SEO).
 
 Muestra de códigoss:

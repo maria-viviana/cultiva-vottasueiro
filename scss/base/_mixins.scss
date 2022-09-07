@@ -1,0 +1,16 @@
+@mixin flex ($flex, $justify, $wrap){
+    display: $flex;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin flex1 ($flex, $align){
+    display: $flex;
+    align-items: $align;
+}
+
+@mixin flex2 ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}

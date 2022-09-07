@@ -1,42 +1,60 @@
-header {
-    background-color:black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    menu{
-        background-color:black;
-        display: flex;
-        .navbar{
-            .container-fluid{
-                .navbar-brand{
-                    img{
-                        width: 300px; 
-                        height: 80px;
-                    }
-                }
-                .navbar-collapse{
-                    .navbar-nav{
+header{
+    background-color:$color-uno;
+    @include flex2 (flex, space-between, center);
+    div{
+        img{
+            width: 250px; 
+            height: 70px;
+            margin: 15px;
+        }
+    }
+    div{
+        nav{
+            background-color: $color-uno;
+            div{
+                div{
+                    ul{
                         list-style: none;
-                        display: flex;
-                        margin: 0px 0px 0px 250px;
-                        .nav-item{
-                            margin: 15px;
-                            .nav-link{
-                                text-decoration: none; 
-                                color: whitesmoke; 
-                                font-size: 20px; 
-                                font-weight: 400;
-                                transition: 3s;
-                                    &:hover{
-                                        color: rgba(221, 221, 221, 0.479);
-                                        text-decoration: underline;
-                                }
+                        display: flex;       
+                        li{
+                        margin: 15px;
+                            a{
+                            text-decoration: none; 
+                            color: $color-tres; 
+                            font-size: 18px; 
+                            font-weight: 400;
+                            transition: 3s;
+                            &:hover{
+                            color: $color-seis;
+                            text-decoration: underline;
+                                }                          
                             }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+
+@media screen and (max-width:1150px){
+    header nav ul{
+        margin: 0px 0px 0px 80px;;
+    }
+}
+
+@media screen and (max-width:930px){
+    header div img{
+        width: 200px; 
+        height: 50px;
+    }
+}
+
+@media screen and (max-width:930px){
+    header nav img{
+        width: 200px; 
+        height: 50px;
     }
 }
 

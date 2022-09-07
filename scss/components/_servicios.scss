@@ -2,16 +2,18 @@
 
 .servicios-todos{
     margin: 60px 0px 60px 0px;
-    width: 1300px;
+    width: auto;
     .servicio-uno{
-        display: flex;
-        justify-content: space-evenly;
-        div{
-            width: 300px; 
-            margin: 25px; 
+        width: auto;
+        @include flex (flex, space-evenly, wrap);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        #disenio{
+            margin: 25px 50px 80px 150px; 
             text-align:left;
         }
         div{
+            margin: 25px 80px 25px 50px; 
             img{
                 width: 400px;
                 height: 400px;
@@ -19,30 +21,34 @@
         }
     }
     .servicio-dos{
+        width: auto;
         display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         justify-content: space-evenly;
-        div{
-            width: 300px; 
-            margin: 25px 50px 25px 80px; 
+        #mentorias{
+            margin: 25px 130px 25px 50px; 
             text-align:left; 
         }
         div{
             img{
+                margin: 25px 50px 80px 150px; 
                 width: 400px;
                 height: 400px;
             }
         }
     }
     .servicio-tres{
-        display: flex;
-        justify-content: space-evenly;
-        div{
-            width: 300px; 
-            height: 450px; 
-            margin: 25px; 
-            text-align:left; 
+        width: auto;
+        @include flex (flex, space-evenly, wrap);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        #mantenimiento{
+            margin: 25px 50px 80px 150px; 
+            text-align:left;
         }
         div{
+            margin: 25px 80px 25px 50px; 
             img{
                 width: 400px;
                 height: 400px;
@@ -50,47 +56,185 @@
         }
     }
     div{
+        h1{
+            color: $color-uno; 
+            font-size: 35px;
+        }
         h2{
-            color: black; 
+            color: $color-uno; 
             font-size: 35px;
         }
         p{
-            color: rgb(68, 64, 64); 
+            color: $color-cuatro; 
             font-size: 18px;
             margin: 30px 0px 40px 0px;
         }
         a{
             text-decoration: none; 
-            color: whitesmoke; 
-            background-color: black; 
+            @extend %cta;
             padding: 6px 15px 6px 15px;
             transition: 1s;
-            &:hover{  /*ANIMACIONES EN LOS BOTONES DE CADA UNO DE LOS SERVICIOS*/
-                background-color: white;
-                color: black;
+            &:hover{  
+                background-color: $color-dos;
+                color: $color-uno;
                 border: 2px solid;
-                border-color: black;
+                border-color: $color-uno;
             }
         }
     }
 }
 
-/*CLASES DEL ACORDION DE BOOTSTRAP*/
+/*CLASES DEL ACORDION DE BOOTSTRAP MODIFICADAS EN MI CSS*/
 
 .preguntas-frecuentes{
         h2{
             text-align: center;
-            color: black;
+            color: $color-uno;
             font-size: 40px;
             padding: 80px 0px 10px 0px;
         }
     }
-
     .accordion-flush{
         margin: 70px 100px 120px 180px;
         padding: 25px;
-        background-color: rgb(187, 187, 187);
     }
+
+/*Media Queries*/
+
+@media screen and (max-width:1024px) {
+    .servicios-todos .servicio-uno #disenio{ 
+        margin: 25px 20px 80px 80px; 
+    }
+    .servicios-todos .servicio-dos div img{
+        margin: 25px 20px 80px 40px; 
+    }
+    .servicios-todos .servicio-dos #mentorias{
+        margin: 25px 80px 25px 30px; 
+    }
+    .servicios-todos .servicio-tres #mantenimiento{
+        margin: 25px 20px 80px 80px;
+    }
+}
+
+@media screen and (max-width:880px) {
+    .servicios-todos .servicio-uno #disenio{ 
+        margin: 25px 10px 50px 30px; 
+    }
+    .servicios-todos .servicio-uno div img{
+        width: 300px;
+        height: 300px;
+    }
+    .servicios-todos .servicio-dos div img{
+        width: 300px;
+        height: 300px; 
+    }
+    .servicios-todos .servicio-dos #mentorias{
+        margin: 25px 30px 25px 10px; 
+    }
+    .servicios-todos .servicio-tres #mantenimiento{
+        margin: 25px 10px 80px 30px;
+    }
+    .servicios-todos .servicio-tres div img{
+        width: 300px;
+        height: 300px; 
+    }
+    .servicios-todos div p{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .servicios-todos .servicio-uno{ 
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+    }
+    .servicios-todos .servicio-dos{
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .servicios-todos .servicio-dos #mentorias{
+        margin: 25px 10px 80px 30px;
+    }
+    .servicios-todos .servicio-dos div img{
+        display: flex;
+        margin: 0px;
+    }
+    .servicios-todos .servicio-tres{
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .servicios-todos .servicio-uno div img{ 
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .servicios-todos .servicio-dos div img{ 
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .servicios-todos .servicio-tres div img{ 
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .accordion-flush{ 
+        margin: 70px 0px 120px 0px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .servicios-todos .servicio-uno div img{ 
+        width: 320px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .servicios-todos .servicio-uno div{
+        margin: 25px 5px 25px 5px; 
+    }
+    .servicios-todos .servicio-dos div img{ 
+        width: 320px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .servicios-todos .servicio-tres div img{ 
+        width: 320px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .servicios-todos .servicio-tres div{
+        margin: 25px 5px 25px 5px; 
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .preguntas-frecuentes{
+        h2{
+            font-size: 45px;
+            padding: 50px 20px 0px 20px;
+            margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .accordion-flush{
+        margin: 30px 10px 80px 10px;
+        padding: px;
+    }    
+}
+
+
+
 
 
 

@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../img/cultivalogofavicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/backup.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Contacto | Cultiva Estudio - Presencia digital - Buenos Aires, Argentina</title>
     <meta name="description" content="¡Escribinos! Te aconsejamos sobre el proyecto de diseño web que estás buscando para tu negocio. Proyectos de diseño web personalizados y a medida adapatados a la necesidad de cada cliente.">
     <meta name="keywords" content="diseño web profesional, diseño de paginas web, diseño web en wordpress argentina, mantenimiento web argentina, tiendas online wordpress, diseñadora web argentina, diseñadora web freelance argentina, diseño de sitios web personalizados">
@@ -17,60 +17,69 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../img/logocultiva.png" alt="imagen del logo con el nombre del negocio: cultiva"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./servicios.html">servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./proyectos.html">proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./nosotros.html">nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main> <!--Agregué formulario de contacto de BS. Cambié los nombres de cada input poniendolos en español, por ejemplo "first name" lo cambie por "nombre". Modifiqué el color del botón de enviar. Les agregué márgenes entre cada uno. Modifiqué en CSS el botón de enviar agregandole margen superior y más padding a los costados-->
-        <section class="seccion-contacto">
-            <div class="seccion-contacto-izq">
-                <H1>Escribinos</H1>
-                <div>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
-                        </div>
+        <div>
+            <a href="../index.html"><img src="../img/logocultiva.png" alt="imagen del logo con el nombre del negocio: cultiva"></a>
+        </div>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label"></label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Correo electrónico">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribir mensaje..."></textarea>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="seccion-contacto">
+            <div class="seccion-contacto-izq">
+                <div>
+                    <H1>Escribinos</H1>
                 </div>
                 <div>
-                <button type="button" class="btn btn-secondary btn-dark">ENVIAR</button>
+                    <form action=""> 
+                        <div>
+                            <label for="nombre y apellido"></label>
+                            <input type="text" name="nombre y apellido" placeholder="Nombre y Apellido">
+                        </div>
+                        <div>
+                            <label for="email"></label>
+                            <input type="email" name="email" placeholder="Correo electronico">
+                        </div>
+                        <div>
+                            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribir mensaje..."></textarea>
+                        </div>
+                        <div>
+                            <p>¿Te gustaría recibir ofertas exclusivas, novedades, acceder a prelanzamientos de servicios, etc?</p>
+                            <select name="" id="">newslatter
+                            <option value="">si</option>
+                            <option value="">no</option>
+                            </select>
+                        </div>
+                        <div class="enviar">
+                            <input type="submit">
+                        </div>
+                    </form>
                 </div>
             </div>
             <div>
@@ -78,17 +87,17 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
+    <footer> 
+        <div class="logo">
             <img src="../img/logoprincipalcultiva.png" alt="imagen del logo principal de cultiva estudio">
         </div>
         <div>
             <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="./pages/servicios.html">servicios</a></li>
-                <li><a href="./pages/proyectos.html">proyectos</a></li>
-                <li><a href="./pages/nosotros.html">nosotros</a></li>
-                <li><a href="./pages/contacto.html">contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div>
@@ -96,12 +105,19 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.39708840297!2d-58.57338658228694!3d-34.61546111121155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1656616266895!5m2!1ses-419!2sar"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            </iframe>
+            <div class="redes">
+                <a href="https://www.facebook.com/cultivaestudio" target="_blank"><img src="../img/facebook.png" alt="ícono de red social facebook"></a>
+                <a href="https://www.instagram.com/cultiva.estudio/" target="_blank"><img src="../img/instagram.png" alt="ícono de red social instagram"></a>
+                <a href="https://www.linkedin.com/company/cultiva-estudio-diseno-web/" target="_blank"><img src="../img/linkedin.png" alt="ícono de linkedin"></a>
+            </div>
+        </div>
+        <div class="mobil">
+            <img src="../img/logoprincipalcultiva.png" alt="imagen del logo principal de cultiva estudio">
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
